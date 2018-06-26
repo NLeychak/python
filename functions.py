@@ -5,7 +5,7 @@ myList = myList.fillList()
 print 'Generated list:',myList
 #myList = [82.482, 'ag', 49.118, 48.289, 6, 'itpdet', 10, '10']
 d = None
-VAT = 0.19
+VAT = 3.0
 aa = 100
 ba = 300
 
@@ -34,10 +34,9 @@ print 'Calculator_summ\nA(',aa,') + B(',ba,') =', calc(aa, ba)
 def VAT_price_calculator(price):
     summ = 0
     if int_or_float(price):
-        summ = (price + (price * ((VAT * 100) / price)))
+        summ = price + (price * (VAT / 100))
     return summ
 
-VAT_price_calculator(100)
 print 'TAX = >', VAT_price_calculator(155)
 #bar(3, 6, 7, 3)
     
